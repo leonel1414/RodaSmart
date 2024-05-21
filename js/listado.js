@@ -126,9 +126,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${vehiculo.marca}</td>
                     <td>${vehiculo.numPuertas}</td>
                     <td>${vehiculo.numPlazas}</td>
+                    <td><button class="btn-eliminar" data-id="${vehiculo.id}"></button><button class="btn-modificar" data-id="${vehiculo.id}"></button></td>
                 </tr>
             `;
         });
+
+        // Agregar el event listener a los botones de eliminar
+        document.querySelectorAll('.btn-eliminar').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const id = parseInt(e.target.getAttribute('data-id'));
+                eliminarVehiculo(id);
+            });
+        });
+    }
+
+    // Función para eliminar un vehículo
+    function eliminarVehiculo(id) {
+        vehiculos = vehiculos.filter(vehiculo => vehiculo.id !== id);
+        actualizarTabla();
     }
 
     // Función para limpiar los campos del formulario

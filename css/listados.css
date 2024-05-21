@@ -120,6 +120,26 @@ td {
     border-radius: 3px;
     padding: 10px;
 }
+button.btn-eliminar,
+button.btn-modificar{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    padding: 20px;
+}
+button.btn-eliminar{
+    background-image: url('/img/iconeliminar.ico');
+    margin-right: 10px;
+}
+button.btn-modificar{
+    background-image: url('/img/iconmodificar.ico');
+}
+button.btn-eliminar:hover,
+button.btn-modificar:hover {
+    background-color: transparent;
+}
 .modal{
     display: flex;
     position: fixed;
