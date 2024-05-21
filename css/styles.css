@@ -1,0 +1,137 @@
+/* Estilos generales */
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    background-image: url(https://www.10wallpaper.com/wallpaper/1366x768/1205/route_to_castle_mountai-Mountain_scenery_wallpaper_1366x768.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 130px 100px;
+}
+
+/* Estilos de la navbar */
+.navbar {
+    background-color: #db2a41;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.navbar-left img {
+    width: 50px;
+    height: auto;
+    /* filter: drop-shadow(2px 2px 4px #faea10); */
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Estilos de la card */
+.card {
+    width: 60%;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    opacity: 0.9;
+}
+
+.card img {
+    width: 300px;
+    margin-left: 80px;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content>h2 {
+    color: #db2a41;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    font-weight: bold;
+    margin: 20px;
+}
+
+select {
+    padding: 5px 30px;
+    border: 1px #db2a41 solid;
+    border-radius: 10px;
+}
+
+.location {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 30px;
+    border: 1px #db2a41 solid;
+    border-radius: 20px;
+    background-color: #db2a41;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #fd8f52;
+    color: black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.weather {
+    margin-top: 20px;
+}
+
+/* Estilos de la sidebar */
+.sidebar {
+    width: 25%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos del footer */
+footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    padding: 20px;
+    background-color: #db2a41;
+}
+
+i,
+.footer-p {
+    color: #fff;
+}

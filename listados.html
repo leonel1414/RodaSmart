@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listados</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/listados.css">
+    <link rel="icon" href="/img/logo3.7.png">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    <nav class="navbar-admin">
+        <div class="navbar-left">
+            <img src="/img/logo3.9.png" alt="Logo">
+        </div>
+        <div class="navbar-menu">
+            <a href="/index.html">Home</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Vehículos</a>
+            <a href="#">Contacto</a>
+            <a href="/registro.html">Hola Leo!</a> <!--arreglar según el nombre de user-->
+        </div>
+    </nav>
+    
+    <div class="btn-listados">
+        <input type="button" value="Alquileres">
+        <input type="button" value="Clientes">
+        <input type="button" value="Oficinas">
+        <input type="button" value="Reservas">
+        <input type="button" value="Reportes">
+    </div>
+    <div class="cambiar">
+        <button class="vehiculos">Vehículos</button>
+    </div>
+    <div class="botones-listado">
+        <div class="busqueda">
+            <input type="button" value="Buscar" id="buscar-id">
+            <input type="text" name="numero-id" id="numero-id" placeholder="ID">
+        </div>
+        <div class="btn-abm">
+            <input type="button" value="Crear" class="crear-abm">
+            <input type="button" value="Eliminar" id="eliminar">
+            <input type="button" value="Modificar" id="modificar">
+        </div>
+    </div>
+    <div class="tbl-listado">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Matrícula</th>
+                <th>Grupo</th>
+                <th>Modelo</th>
+                <th>Capacidad Maletero</th>
+                <th>Marca</th>
+                <th>Número Puertas</th>
+                <th>Número Plazas</th>
+            </tr>
+        </table>
+    </div>
+    
+    <section class="modal">
+        <div class="modal__container">
+            <span class="modal__close">&times;</span>
+            <h2>Nuevo Vehículo</h2>
+            <form action="" class="modal__form">
+                <div class="modal__group">
+                    <label for="">Matrícula:</label>
+                    <input type="text" id="matricula">
+                </div>
+                <div class="modal__group">
+                    <label for="">Grupo:</label>
+                    <input type="text" id="grupo">
+                </div>
+                <div class="modal__group">
+                    <label for="">Modelo:</label>
+                    <input type="text" id="modelo">
+                </div>
+                <div class="modal__group">
+                    <label for="">Capacidad de Maletero:</label>
+                    <input type="text" id="capacidadMaletero">
+                </div>
+                <div class="modal__group">
+                    <label for="">Marca:</label>
+                    <input type="text" id="marca">
+                </div>
+                <div class="modal__group">
+                    <label for="">Número de Puertas:</label>
+                    <input type="text" id="numPuerta">
+                </div>
+                <div class="modal__group">
+                    <label for="">Número de Plazas:</label>
+                    <input type="tex" id="numPlaza">
+                </div>
+                <div class="div-btncrear">
+                    <button class="btn__crear">Crear</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-c-circle"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <p class="footer-p">Derechos reservados @2024</p>
+    </footer>
+    <script src="js/listado.js"></script>
+</body>
+</html>

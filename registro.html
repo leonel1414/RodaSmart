@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodásmart</title>
+  <link rel="stylesheet" href="/css/registro.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="/img/logo3.7.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="/img/logo3.7.png" alt="Logo">
+    </div>
+    <div class="navbar-right">
+      <a href="/index.html">HOME</a>
+      <a href="#">SOBRE NOSOTROS</a>
+      <a href="#">VEHICULOS</a>
+      <a href="#">CONTACTO</a>
+      <a href="/registro.html">INICIAR SESION</a>
+    </div>
+  </nav>
+  <article>
+    <div class="login">
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </div>
+    <div class="registro">
+      <h2>Formulario de Registro</h2>
+      <form id="registrationForm">
+        <div class="input-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="_nombre" required>
+        </div>
+        <div class="input-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="_apellido" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="_email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="_password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Repetir Contraseña:</label>
+          <input type="password" id="_confirmPassword" required>
+        </div>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </article>
+  <footer class="footer">
+    <div class="redes-sociales">
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-pinterest"></i></a>
+      <a href="#"><i class="bi bi-c-circle"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="footer-p">Derechos reservados @2024</p>
+  </footer>
+  <script src="/js/registro.js"></script>
+  <script src="/js/login.js"></script>
+  <!-- <script src="/js/login.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodásmart</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/logo3.7.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body class="principal">
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="/img/logo3.7.png" alt="Logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#">HOME</a>
+            <a href="#">SOBRE NOSOTROS</a>
+            <a href="#">VEHICULOS</a>
+            <a href="#">CONTACTO</a>
+            <a href="/registro.html">INICIAR SESION</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <img src="/img/auto.jpg" alt="Auto">
+            <div class="card-content">
+                <h2>¡RESERVAR AHORA!</h2>
+                <p>Buscar por ciudad</p>
+                <select name="ciudad" id="ciudad">
+                    <option value="1">Capital Federal</option>
+                    <option value="2">Córdoba</option>
+                    <option value="3">Mar del Plata</option>
+                    <option value="4">Santa Fé</option>
+                    <option value="5">Santa Cruz</option>
+                </select>
+                <div class="location">
+                    <input type="checkbox" id="location">
+                    <label for="location">Activar tu ubicación actual</label>
+                </div>
+                <button>Continuar</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="map">
+                <!-- Mapa aquí -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9290.518070244347!2d-58.391896130973265!3d-34.586604377869705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1715277133265!5m2!1ses!2sar" width="300" height="200" style="border:0; border-radius: 8px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="weather">
+                <!-- Información meteorológica aquí -->
+                <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=8684233&language=es&region=AR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" width="300" height="200" frameborder="0" style="border: 1px solid #10658E;border-radius: 8px"></iframe>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-c-circle"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>    
+        </div>
+        <p class="footer-p">Derechos reservados @2024</p>
+    </footer>
+</body>
+</html>
