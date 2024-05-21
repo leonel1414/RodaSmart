@@ -132,6 +132,26 @@ td {
     pointer-events: none;
     transition: opacity .3s;
 }
+.span-cerrar{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+.modal__close{
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #f8c8cc;
+    color: #d53e4b;
+    cursor: pointer;
+    padding: 0 8px;
+    justify-items: center;
+    border-radius: 5px;
+}
+.modal__close:hover {
+    background-color: #d53e4b;
+    color: #f8c8cc;
+    transition: 0.3s;
+}
 .modal--show{
     opacity: 1;
     pointer-events: unset;
