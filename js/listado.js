@@ -32,47 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const numPuertas = document.querySelector('#numPuerta').value;
         const numPlazas = document.querySelector('#numPlaza').value;
 
-        if (matricula === '' || grupo === '' || modelo === '' || capacidadMaletero === '' || marca === '' || numPuertas === '' || numPlazas === '') {
-            mostrarError('Por favor, complete todos los campos.');
-            return;
-        }
-
-        if (!/^[a-zA-Z0-9]{1,6}$/.test(matricula)) {
-            mostrarError('La matrícula debe contener hasta 6 caracteres alfanuméricos.');
-            return;
-        }
-
-        if (!/^[a-zA-Z\s]{1,8}$/.test(grupo)) {
-            mostrarError('El grupo debe contener hasta 8 caracteres y solo letras.');
-            return;
-        }
-
-        if (modelo.length > 10) {
-            mostrarError('El modelo debe contener hasta 10 caracteres.');
-            return;
-        }
-
-        if (isNaN(capacidadMaletero) || capacidadMaletero < 0 || capacidadMaletero > 1000) {
-            mostrarError('La capacidad de maletero debe ser un número entre 0 y 1000.');
-            return;
-        }
-
-        if (!/^[a-zA-Z\s]{1,12}$/.test(marca)) {
-            mostrarError('La marca debe contener hasta 12 caracteres y solo letras.');
-            return;
-        }
-
-        if (isNaN(numPuertas) || numPuertas < 0 || numPuertas > 6) {
-            mostrarError('El número de puertas debe ser un número entre 0 y 6.');
-            return;
-        }
-
-        if (isNaN(numPlazas) || numPlazas < 0 || numPlazas > 6) {
-            mostrarError('El número de plazas debe ser un número entre 0 y 6.');
-            return;
-        }
-
-        // Crear el objeto de vehículo
+        //Paso los datos a una funcion que me valida los datos
+        const validar = validarDatosVehiculos(matricula,grupo,modelo,capacidadMaletero,marca,numPuertas,numPlazas);
+        //Si el valor es TRUE me agrega el vehiculo
+        if(validar == true){
+            // Crear el objeto de vehículo
         const id = vehiculos.length + 1; // Generar un ID autoincremental
         const nuevoVehiculo = {
             id: id,
@@ -96,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Cerrar el modal
         modal.classList.remove('modal--show');
+        }
+
     });
 
     // Función para actualizar la tabla con los datos de vehículos
@@ -178,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function guardarCambios(id) {
+
         // Obtener los datos modificados del formulario
         const matricula = document.querySelector('#matricula').value;
         const grupo = document.querySelector('#grupo').value;
@@ -186,8 +153,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const marca = document.querySelector('#marca').value;
         const numPuertas = document.querySelector('#numPuerta').value;
         const numPlazas = document.querySelector('#numPlaza').value;
-    
-        // Actualizar el vehículo en el array
+        
+         //Paso los datos a una funcion que me valida los datos
+        const validar = validarDatosVehiculos(matricula,grupo,modelo,capacidadMaletero,marca,numPuertas,numPlazas);
+
+        if(validar == true){
+            // Actualizar el vehículo en el array
         const vehiculo = vehiculos.find(veh => veh.id === id);
         if (vehiculo) {
             vehiculo.matricula = matricula;
@@ -210,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Restaurar el texto del botón a "Crear"
             const btnCrear = document.querySelector('.btn__crear');
             btnCrear.textContent = 'Crear';
+        }
         }
     }    
 
@@ -262,7 +234,51 @@ document.addEventListener('DOMContentLoaded', function() {
             `
         });
     }
-
+    function validarDatosVehiculos(matricula, grupo, modelo, capacidadMaletero, marca, numPuertas, numPlazas) {
+        if (matricula === '' || grupo === '' || modelo === '' || capacidadMaletero === '' || marca === '' || numPuertas === '' || numPlazas === '') {
+            mostrarError('Por favor, complete todos los campos.');
+            return false;
+        }
+    
+        if (!/^[a-zA-Z0-9]{1,6}$/.test(matricula)) {
+            mostrarError('La matrícula debe contener hasta 6 caracteres alfanuméricos.');
+            return false;
+        }
+    
+        if (!/^[a-zA-Z\s]{1,8}$/.test(grupo)) {
+            mostrarError('El grupo debe contener hasta 8 caracteres y solo letras.');
+            return false;
+        }
+    
+        if (modelo.length > 10) {
+            mostrarError('El modelo debe contener hasta 10 caracteres.');
+            return false;
+        }
+    
+        if (isNaN(capacidadMaletero) || capacidadMaletero < 0 || capacidadMaletero > 1000) {
+            mostrarError('La capacidad de maletero debe ser un número entre 0 y 1000.');
+            return false;
+        }
+    
+        if (!/^[a-zA-Z\s]{1,12}$/.test(marca)) {
+            mostrarError('La marca debe contener hasta 12 caracteres y solo letras.');
+            return false;
+        }
+    
+        if (isNaN(numPuertas) || numPuertas < 0 || numPuertas > 6) {
+            mostrarError('El número de puertas debe ser un número entre 0 y 6.');
+            return false;
+        }
+    
+        if (isNaN(numPlazas) || numPlazas < 0 || numPlazas > 6) {
+            mostrarError('El número de plazas debe ser un número entre 0 y 6.');
+            return false;
+        }
+    
+        // Si todas las validaciones pasan, retorna true para indicar que los datos son válidos.
+        return true;
+    }
+    
     // Función para mostrar un error con SweetAlert para todos los campos
     function mostrarError(mensaje) {
         Swal.fire({
