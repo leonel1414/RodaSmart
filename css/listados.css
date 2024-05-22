@@ -151,6 +151,7 @@ button.btn-modificar:hover {
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s;
+    z-index: 1;
 }
 .span-cerrar{
     display: flex;
