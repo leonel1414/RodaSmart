@@ -126,9 +126,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     <td>${vehiculo.marca}</td>
                     <td>${vehiculo.numPuertas}</td>
                     <td>${vehiculo.numPlazas}</td>
-                    <td><button class="btn-eliminar" data-id="${vehiculo.id}"></button><button class="btn-modificar" data-id="${vehiculo.id}"></button></td>
+                    <td><button class="btn-modificar" data-id="${vehiculo.id}"></button><button class="btn-eliminar" data-id="${vehiculo.id}"></button></td>
                 </tr>
             `;
+        });
+
+         // Agregar event listener a los botones de modificar
+         document.querySelectorAll('.btn-modificar').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const id = parseInt(e.target.getAttribute('data-id'));
+                cargarVehiculoParaModificar(id);
+            });
         });
 
         // Agregar el event listener a los botones de eliminar
@@ -139,6 +147,71 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    function cargarVehiculoParaModificar(id) {
+        const vehiculo = vehiculos.find(veh => veh.id === id);
+        if (vehiculo) {
+            document.querySelector('#matricula').value = vehiculo.matricula;
+            document.querySelector('#grupo').value = vehiculo.grupo;
+            document.querySelector('#modelo').value = vehiculo.modelo;
+            document.querySelector('#capacidadMaletero').value = vehiculo.capacidadMaletero;
+            document.querySelector('#marca').value = vehiculo.marca;
+            document.querySelector('#numPuerta').value = vehiculo.numPuertas;
+            document.querySelector('#numPlaza').value = vehiculo.numPlazas;
+    
+            // Abrir el modal
+            modal.classList.add('modal--show');
+    
+            // Cambiar el texto del botón crear por "Guardar cambios"
+            const btnCrear = document.querySelector('.btn__crear');
+            btnCrear.textContent = 'Guardar cambios';
+    
+            // Remover event listeners anteriores para evitar múltiples listeners
+            btnCrear.replaceWith(btnCrear.cloneNode(true));
+            const newBtnCrear = document.querySelector('.btn__crear');
+    
+            newBtnCrear.addEventListener('click', (e) => {
+                e.preventDefault();
+                guardarCambios(id);
+            });
+        }
+    }
+
+    function guardarCambios(id) {
+        // Obtener los datos modificados del formulario
+        const matricula = document.querySelector('#matricula').value;
+        const grupo = document.querySelector('#grupo').value;
+        const modelo = document.querySelector('#modelo').value;
+        const capacidadMaletero = document.querySelector('#capacidadMaletero').value;
+        const marca = document.querySelector('#marca').value;
+        const numPuertas = document.querySelector('#numPuerta').value;
+        const numPlazas = document.querySelector('#numPlaza').value;
+    
+        // Actualizar el vehículo en el array
+        const vehiculo = vehiculos.find(veh => veh.id === id);
+        if (vehiculo) {
+            vehiculo.matricula = matricula;
+            vehiculo.grupo = grupo;
+            vehiculo.modelo = modelo;
+            vehiculo.capacidadMaletero = parseInt(capacidadMaletero);
+            vehiculo.marca = marca;
+            vehiculo.numPuertas = parseInt(numPuertas);
+            vehiculo.numPlazas = parseInt(numPlazas);
+    
+            // Actualizar la tabla
+            actualizarTabla();
+    
+            // Limpiar los campos del formulario
+            limpiarCampos();
+    
+            // Cerrar el modal
+            modal.classList.remove('modal--show');
+    
+            // Restaurar el texto del botón a "Crear"
+            const btnCrear = document.querySelector('.btn__crear');
+            btnCrear.textContent = 'Crear';
+        }
+    }    
 
     // Función para eliminar un vehículo
     function eliminarVehiculo(id) {
@@ -173,8 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
-    
     function mostrarVehiculoEncontrado(vehiculoEncontrado) {
         Swal.fire({
             icon: 'success',
@@ -188,12 +259,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 <b>Marca:</b> ${vehiculoEncontrado.marca}<br>
                 <b>Número Puertas:</b> ${vehiculoEncontrado.numPuertas}<br>
                 <b>Número Plazas:</b> ${vehiculoEncontrado.numPlazas}<br>
-                <b>Litros:</b> ${vehiculoEncontrado.litros}<br>
             `
         });
     }
-
-    
 
     // Función para mostrar un error con SweetAlert para todos los campos
     function mostrarError(mensaje) {

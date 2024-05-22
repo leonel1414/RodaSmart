@@ -131,10 +131,10 @@ button.btn-modificar{
 }
 button.btn-eliminar{
     background-image: url('/img/iconeliminar.ico');
-    margin-right: 10px;
 }
 button.btn-modificar{
     background-image: url('/img/iconmodificar.ico');
+    margin-right: 10px;
 }
 button.btn-eliminar:hover,
 button.btn-modificar:hover {
