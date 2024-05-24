@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 text: "¿Quieres guardar los cambios?",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonColor: "#3085d6",
+                confirmButtonColor: "#ffbe70",
                 cancelButtonColor: "#d33",
                 confirmButtonText: "Sí",
                 cancelButtonText: "No"
@@ -201,9 +201,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Función para eliminar un vehículo
     function eliminarVehiculo(id) {
-        vehiculos = vehiculos.filter(vehiculo => vehiculo.id !== id);
-        actualizarTabla();
+        // Mostrar confirmación con swal
+        Swal.fire({
+            title: "¿Estás seguro?",
+            text: "¿Quieres eliminar este vehículo?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#ffbe70",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "No, cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Eliminar el vehículo del array
+                vehiculos = vehiculos.filter(vehiculo => vehiculo.id !== id);
+    
+                // Actualizar la tabla
+                actualizarTabla();
+            } else {
+                // Cerrar el modal si el usuario cancela
+                modal.classList.remove('modal--show');
+            }
+        });
     }
+    
 
     // Función para limpiar los campos del formulario
     function limpiarCampos() {
