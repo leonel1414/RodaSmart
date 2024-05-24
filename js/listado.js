@@ -144,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function guardarCambios(id) {
-
         // Obtener los datos modificados del formulario
         const matricula = document.querySelector('#matricula').value;
         const grupo = document.querySelector('#grupo').value;
@@ -153,37 +152,52 @@ document.addEventListener('DOMContentLoaded', function () {
         const marca = document.querySelector('#marca').value;
         const numPuertas = document.querySelector('#numPuerta').value;
         const numPlazas = document.querySelector('#numPlaza').value;
-
+    
         //Paso los datos a una funcion que me valida los datos
         const validar = validarDatosVehiculos(matricula, grupo, modelo, capacidadMaletero, marca, numPuertas, numPlazas);
-
-        if (validar == true) {
-            // Actualizar el vehículo en el array
-            const vehiculo = vehiculos.find(veh => veh.id === id);
-            if (vehiculo) {
-                vehiculo.matricula = matricula;
-                vehiculo.grupo = grupo;
-                vehiculo.modelo = modelo;
-                vehiculo.capacidadMaletero = parseInt(capacidadMaletero);
-                vehiculo.marca = marca;
-                vehiculo.numPuertas = parseInt(numPuertas);
-                vehiculo.numPlazas = parseInt(numPlazas);
-
-                // Actualizar la tabla
-                actualizarTabla();
-
-                // Limpiar los campos del formulario
-                limpiarCampos();
-
-                // Cerrar el modal
-                modal.classList.remove('modal--show');
-
-                // Restaurar el texto del botón a "Crear"
-                const btnCrear = document.querySelector('.btn__crear');
-                btnCrear.textContent = 'Crear';
-            }
+    
+        if (validar) {
+            // Mostrar confirmación con swal
+            Swal.fire({
+                title: "¿Estás seguro?",
+                text: "¿Quieres guardar los cambios?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sí",
+                cancelButtonText: "No"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Actualizar el vehículo en el array
+                    const vehiculo = vehiculos.find(veh => veh.id === id);
+                    if (vehiculo) {
+                        vehiculo.matricula = matricula;
+                        vehiculo.grupo = grupo;
+                        vehiculo.modelo = modelo;
+                        vehiculo.capacidadMaletero = parseInt(capacidadMaletero);
+                        vehiculo.marca = marca;
+                        vehiculo.numPuertas = parseInt(numPuertas);
+                        vehiculo.numPlazas = parseInt(numPlazas);
+    
+                        // Actualizar la tabla
+                        actualizarTabla();
+    
+                        // Limpiar los campos del formulario
+                        limpiarCampos();
+    
+                        // Cerrar el modal
+                        modal.classList.remove('modal--show');
+    
+                        // Restaurar el texto del botón a "Crear"
+                        const btnCrear = document.querySelector('.btn__crear');
+                        btnCrear.textContent = 'Crear';
+                    }
+                }
+            });
         }
     }
+    
 
     // Función para eliminar un vehículo
     function eliminarVehiculo(id) {
