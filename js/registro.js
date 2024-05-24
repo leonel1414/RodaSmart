@@ -10,12 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = document.getElementById("_confirmPassword").value;
 
     if (!nombre || !apellido || !email || !password || !confirmPassword) {
-      alert('Por favor complete todos los campos.');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Completar todos los campos vacios.'
+    });
       return;
     }
 
     if (password !== confirmPassword) {
-      alert("Las contraseñas no coinciden.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Las contraseña no coinciden.'
+    });
       return;
     }
     // Verifico si el correo electrónico ya está registrado
