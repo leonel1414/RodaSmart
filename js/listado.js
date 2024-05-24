@@ -425,4 +425,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btn-reservas').addEventListener('click', mostrarReservas);
     document.getElementById('btn-reportes').addEventListener('click', mostrarReportes);
 
+    // Para consultar antes de Cerrar Sesión
+    const btnCerrarSesion = document.querySelector('a[href="/registro.html"]');
+    btnCerrarSesion.addEventListener('click', function (e) {
+        e.preventDefault();
+        Swal.fire({
+            title: '¿Cerrar sesión?',
+            text: '¿Estás seguro de que quieres cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#ffbe70',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, cerrar sesión',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/index.html";
+            }
+        });
+    });
+    
 });
