@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
-<!-- comentario -->
+
 <body>
     <nav class="navbar-admin">
         <div class="navbar-left">
@@ -20,20 +20,21 @@
         <div class="navbar-menu">
             <a href="/index.html">Home</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="#">Vehículos</a>
+            <a href="#" id="btn-servicios">Servicios</a>
             <a href="#">Contacto</a>
-            <a href="/registro.html">Cerrar Sesión</a> <!--arreglar según el nombre de user-->
+            <a href="/registro.html">Cerrar Sesión</a>
         </div>
     </nav>
-    
-    <div class="btn-listados">
+
+    <div class="btn-listados" id="opciones-servicios">
         <input type="button" value="Alquileres">
         <input type="button" value="Clientes">
         <input type="button" value="Oficinas">
+        <input type="button" value="Vehículos">
         <input type="button" value="Reservas">
         <input type="button" value="Reportes">
     </div>
-  
+    
     <div class="botones-listado">
         <div class="busqueda">
             <input type="button" value="Buscar:" id="buscar-id">

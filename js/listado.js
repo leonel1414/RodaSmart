@@ -290,3 +290,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+// Para el desplazamiento del otro menú cuando hago click en el botón Servicios
+document.getElementById('btn-servicios').addEventListener('click', function(event) {
+    event.preventDefault();
+    var opciones = document.getElementById('opciones-servicios');
+    if (!opciones.classList.contains('visible')) {
+        opciones.style.display = 'flex';
+        setTimeout(function() {
+            opciones.classList.add('visible');
+        }, 10); // Pequeño retraso para permitir el cambio de display antes de la transición
+    } else {
+        opciones.classList.remove('visible');
+        setTimeout(function() {
+            opciones.style.display = 'none';
+        }, 500); // Esperar a que la transición termine antes de ocultar
+    }
+});
