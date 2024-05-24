@@ -9,8 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    padding-left: 10px;
+    padding: 10px 20px;
     border-bottom: 1px #d53e4b solid;
 }
 .navbar-menu a {
@@ -18,7 +17,7 @@
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 0 20px;
+    font-size: 1.1em;
 }
 .navbar-menu a:hover{
     transition: all 0.5s;
@@ -30,12 +29,14 @@
     display: flex;
     justify-content: end;
     border-bottom: 1px #d53e4b solid;
+    padding: 5px 0;
 }
 
 .btn-listados input {
     background-color: #fff;
     color: #d53e4b;
     font-weight: bold;
+    font-size: 1em;
     border: none;
     padding: 10px 20px;
     margin-right: 20px;
@@ -48,30 +49,9 @@
     transition: all 0.5s;
 }
 
-.cambiar {
-    /*SACAR Y EDITAR PARA QUE APAREZCA O SE HABILITE POR OFICINAS*/
-    display: flex;
-    justify-content: end;
-    margin-right: 255px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.vehiculos {
-    /*SACAR Y EDITAR PARA QUE APAREZCA O SE HABILITE POR OFICINAS*/
-    background-color: #ece7e6;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 0%;
-    font-weight: bold;
-}
-.vehiculos:hover{
-    background-color: #d53e4b;
-    color: #ece7e6;
-}
-
 .botones-listado {
     display: flex;
+    margin-top: 20px;
 }
 .botones-listado input{
     cursor: pointer;
