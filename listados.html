@@ -27,14 +27,14 @@
     </nav>
 
     <div class="btn-listados" id="opciones-servicios">
-        <input type="button" value="Alquileres">
-        <input type="button" value="Clientes">
-        <input type="button" value="Oficinas">
-        <input type="button" value="Vehículos">
-        <input type="button" value="Reservas">
-        <input type="button" value="Reportes">
+        <input type="button" value="Alquileres" id="btn-alquileres">
+        <input type="button" value="Clientes" id="btn-clientes">
+        <input type="button" value="Oficinas" id="btn-oficinas">
+        <input type="button" value="Vehículos" id="btn-vehiculos">
+        <input type="button" value="Reservas" id="btn-reservas">
+        <input type="button" value="Reportes" id="btn-reportes">
     </div>
-    
+
     <div class="botones-listado">
         <div class="busqueda">
             <input type="button" value="Buscar:" id="buscar-id">
@@ -44,7 +44,7 @@
             <input type="button" value="Crear" class="crear-abm">
         </div>
     </div>
-    <div class="tbl-listado">
+    <div class="tbl-listado fadeIn" id="tabla-vehiculos">
         <table>
             <tr>
                 <th>ID</th>
@@ -100,6 +100,102 @@
             </form>
         </div>
     </section>
+
+    <div id="contenido-dinamico" class="contenido-dinamico">
+        <div class="tbl-listado fadeIn" id="tabla-alquileres">
+            <table>
+                <tr>
+                    <th>ID Alquiler</th>
+                    <th>Duración</th>
+                    <th>Precio Total</th>
+                </tr>
+                <tr>
+                    <td>ID Reporte</td>
+                    <td>ID Cliente</td>
+                    <td>Motivo</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tbl-listado fadeIn" id="tabla-clientes">
+            <table>
+                <tr>
+                    <th>ID Cliente</th>
+                    <th>Nombre</th>
+                    <th>DNI</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Edad</th>
+                    <th>Pago</th>
+                    <th>Permiso</th>
+                </tr>
+                <tr>
+                    <td>ID Reporte</td>
+                    <td>ID Cliente</td>
+                    <td>Motivo</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tbl-listado fadeIn" id="tabla-oficinas">
+            <table>
+                <tr>
+                    <th>ID Oficina</th>
+                    <th>Calle</th>
+                    <th>Número</th>
+                    <th>CP</th>
+                    <th>Teléfono</th>
+                    <th>Ciudad</th>
+                </tr>
+                <tr>
+                    <td>ID Reporte</td>
+                    <td>ID Cliente</td>
+                    <td>Motivo</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tbl-listado fadeIn" id="tabla-reservas">
+            <table>
+                <tr>
+                    <th>ID Reserva</th>
+                    <th>Nombre Reserva</th>
+                    <th>ID Usuario</th>
+                    <th>ID Alquiler</th>
+                    <th>ID Vehículo</th>
+                </tr>
+                <tr>
+                    <td>ID Reporte</td>
+                    <td>ID Cliente</td>
+                    <td>Motivo</td>
+                    <td>Fecha</td>
+                    <td>Fecha</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tbl-listado fadeIn" id="tabla-reportes">
+            <table>
+                <tr>
+                    <th>ID Reporte</th>
+                    <th>ID Cliente</th>
+                    <th>Motivo</th>
+                    <th>Fecha</th>
+                </tr>
+                <tr>
+                    <td>ID Reporte</td>
+                    <td>ID Cliente</td>
+                    <td>Motivo</td>
+                    <td>Fecha</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="redes-sociales">
             <a href="#"><i class="bi bi-twitter"></i></a>
