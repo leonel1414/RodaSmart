@@ -1,0 +1,157 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*quita las lineas de los enlaces*/
+    list-style: none;/*quita los estilos de las listas*/
+}
+
+
+/* Estilos de la navbar */
+.navbar {
+    background-color: #db2a41;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.navbar-left img {
+    width: 50px;
+    height: auto;
+    /* filter: drop-shadow(2px 2px 4px #faea10); */
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Estilos del dropdown seguir tematica del color */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #db2a41;
+    font-weight: bold;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #db2a41;
+}
+
+/*pantalla principal de sobre nosotros*/
+
+.principal {
+    background-image: url(/img/intento9.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size:cover;
+    padding: 20px;
+}
+
+
+.h1-principal {
+    margin-top: 80px;
+    font-size: 65px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: end;
+    padding-right: 350px;
+    font-weight: bold;
+
+}
+
+
+.p-principal {
+    margin-top: 100px;
+    /*width: 900px;*/
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    margin-bottom: 30px;
+    text-align: end;
+    padding: 0  350px 0 600px;
+
+}
+
+.principal a {
+    align-items: center;
+    display: inline-block;/*los enlaces de tipo texto los convertimos en bloque para que el margin y padin se añadan*/
+    padding: 11px 35px; /*es lo que le da anchura de la letra al borde desde arriba y abajo y a los lados*/
+    background-color: rgb(159, 103, 58);
+    color:rgb(255, 255, 255);
+    text-transform: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-left: 1320px;
+}
+
+.principal a:hover {
+    background-color: rgba(254, 212, 175, 0.8);
+}
+
+/*Indice*/
+.SobreElProyecto {
+    height: 100vh;
+    width: 100vw;
+    background-image:url(/img/indicefondo.png);
+}
+
+/* Estilos del footer */
+footer {
+    margin-top: auto;
+    display: flex;
+    /*position: absolute;*/
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #db2a41;
+}
+
+
+.footer-p {
+    color: #fff;
+}
