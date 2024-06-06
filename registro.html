@@ -16,21 +16,33 @@
 <body>
   <nav class="navbar">
     <div class="navbar-left">
-      <img src="/img/logo3.7.png" alt="Logo">
+        <img src="/img/logo3.7.png" alt="Logo">
     </div>
     <div class="navbar-right">
-      <a href="/index.html">HOME</a>
-      <a href="#">SOBRE NOSOTROS</a>
-      <a href="#">SERVICIOS</a>
-      <a href="#">CONTACTO</a>
-      <a href="/registro.html">INICIAR SESION</a>
+        <a href="/index.html">HOME</a>
+        <a href="/nosotros.html">SOBRE NOSOTROS</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">SERVICIOS</a>
+            <div class="dropdown-content">
+                <a href="/listados.html">Vehiculos</a>
+                <a href="#">Alquileres</a>
+                <a href="#">Clientes</a>
+                <a href="#">Oficinas</a>
+                <a href="#">Reservas</a>
+                <a href="#">Reportes</a>
+            </div>
+        </div>
+        <a href="#">CONTACTO</a>
+        <a href="/registro.html">INICIAR SESION</a>
     </div>
-  </nav>
+</nav>
   <article>
     <div class="login">
-      <h2>Iniciar Sesión</h2>
+     
       <form id="loginForm">
+        
         <div class="input-group">
+          <h2>Iniciar Sesión</h2>
           <label for="email">Email:</label>
           <input type="email" id="email" required />
         </div>
@@ -42,9 +54,10 @@
       </form>
     </div>
     <div class="registro">
-      <h2>Formulario de Registro</h2>
+      
       <form id="registrationForm">
         <div class="input-group">
+          <h2>Formulario de Registro</h2>
           <label for="nombre">Nombre:</label>
           <input type="text" id="_nombre" required>
         </div>
@@ -81,5 +94,4 @@
   <script src="/js/registro.js"></script>
   <script src="/js/login.js"></script>
 </body>
-
 </html>
