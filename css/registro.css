@@ -78,7 +78,7 @@ body {
 
 
 article{
-    background-image: url(/img/travel.png);
+    background-image: url(/img/travel2.png);
     background-size:cover;
     background-repeat: no-repeat;
     padding: 50px;
@@ -86,6 +86,7 @@ article{
     justify-content: center;
     column-gap: 200px;
 }
+
 h2 {
     text-align: center;
     margin-bottom: 10px;

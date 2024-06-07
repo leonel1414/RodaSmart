@@ -7,8 +7,8 @@
 }
 
 .principal {
-    background-image: url(/img/fondo-home.jpg);
-    background-size: 100% auto;
+    background-image: url(/img/atardecer2.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -103,15 +103,20 @@
 }
 
 .card img {
-    width: 300px;
+    width: 450px;
     margin-left: 80px;
 }
 
 .card-content {
     flex-grow: 1;
+    width: 500px;
 }
 
+
 .card-content>h2 {
+    margin-top: -100px;
+    padding: 40px 0;
+    font-size: 40px;
     color: #db2a41;
 }
 
@@ -167,9 +172,11 @@ button:hover {
 }
 
 /* Estilos del footer */
+
 footer {
+    margin-top: auto;
     display: flex;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     flex-direction: column;
     justify-content: center;
