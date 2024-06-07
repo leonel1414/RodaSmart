@@ -174,12 +174,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    bottom: 0;
+    bottom: 0px;
     padding: 20px;
     background-color: #db2a41;
 }
 
-i,
 .footer-p {
     color: #fff;
 }

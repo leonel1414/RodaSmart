@@ -137,7 +137,7 @@
     height: 100px;
 }
 
-/*Indice*/
+/*Caja padre*/
 .SobreElProyecto {
     height: 100vh;
     width: 100%;
@@ -145,50 +145,106 @@
     display: flex;
     color: #fff;
     justify-content: space-evenly;
-    
+    align-items: center;
+    padding: 0 3px;
 }
 
 .equipo {
-    width: 500px;
-    margin-top: 250px;
+    width: 640px;
     padding-left: 130px;
 }
 
-.equipo h2{
+.h2-equipo {
     padding: 20px 0;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+}
+
+.equipo p {
+    font-weight: 28px;
+    font-size: 22px;
+}
+
+.nombresEquipo {
+    display: flex;
     text-transform: uppercase;
 }
 
+.nombresEquipo span {
+    margin-right: 8px;
+}
+
+.nombresEquipo h3{
+    font-size:22px ;
+    font-weight: lighter;
+}
+
+
+.nombresIzq, .nombresDer {
+    width: 45%;
+}
+
+.nombresDer {
+    margin-top: 19px;
+}
+
 .color1 {
-    color: rgb(192, 118, 21);
+    color: #ECC588;
     text-transform: uppercase;
 }
 
 .color2 {
     color: rgb(255, 255, 255);
+    text-transform: uppercase;
 }
 
 
 
 .indice {
-    width: 700px;
-    margin-top: 150px;
-    padding-left: 0px;
-    margin-left: 210px;
+    width: 600px;
+    padding-left: 50px;
+}
 
+.indice h1 {
+    font-size: 48px;
+    font-weight:normal;
+    margin-left: 35%;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.h2Indice {
+ font-size: 38px;
+ font-weight: normal;
+}
+
+.indice-content h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ECC588;
+}
+.indice-content h3{
+    font-size: 22px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    
 }
 
 .imgIndice{
-    margin-top: 150px;
-    width: 700px;
-    height: 700px;
-    background-image: url(/img/Roadtrip.jpeg);
-    margin-right: 300px;
+    margin-top: 80px;
+    width: 531px;
+    height: 75%;
+    margin-right: 205px;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
     background-size:cover;
+}
+
+.imgIndice img{
+    width: 100%;
+    height: 100%;
 }
 
 /* Estilos del footer */
