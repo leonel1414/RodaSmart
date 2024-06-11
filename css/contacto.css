@@ -1,0 +1,23 @@
+.container-contacto{
+    display: flex;
+}
+.contact,
+.informacion{
+    width: 50%;
+    margin: 10%;
+}
+.contact h1{
+    font-size: 4em;
+}
+.contact p{
+    text-align: center;
+}
+.contact-form{
+    text-align: center;
+}
+.contact label{
+    display: block;
+}
+.contact a{
+    display: block;
+}
