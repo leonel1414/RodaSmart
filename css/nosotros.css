@@ -20,8 +20,9 @@
 }
 
 .navbar-left img {
-    width: 50px;
+    width: 150px;
     height: auto;
+    margin-left: 20px;
     /* filter: drop-shadow(2px 2px 4px #faea10); */
 }
 
@@ -118,7 +119,7 @@
     align-items: center;
     display: inline-block;/*los enlaces de tipo texto los convertimos en bloque para que el margin y padin se añadan*/
     padding: 12px 35px; /*es lo que le da anchura de la letra al borde desde arriba y abajo y a los lados*/
-    background-color: #623F22;
+    background-color: #E96435;
     color:rgb(255, 255, 255);
     text-transform: none;
     border-radius: 50px;
@@ -191,7 +192,7 @@
 }
 
 .color1 {
-    color: #ECC588;
+    color: #FF975C;
     text-transform: uppercase;
 }
 
@@ -223,7 +224,7 @@
 .indice-content h2 {
     font-size: 24px;
     text-transform: uppercase;
-    color: #ECC588;
+    color: #FF975C;
 }
 .indice-content h3{
     font-size: 22px;

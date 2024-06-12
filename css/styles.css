@@ -32,8 +32,9 @@
 }
 
 .navbar-left img {
-    width: 50px;
+    width: 150px;
     height: auto;
+    margin-left: 20px;
     /* filter: drop-shadow(2px 2px 4px #faea10); */
 }
 
@@ -89,11 +90,13 @@
 
 /* Estilos de la card */
 .card {
-    width: 60%;
-    margin: 20px;
+    width: 55%;
+    height: 450px;
+    margin: 30px;
     border: 1px solid #ccc;
     border-radius: 50px;
     padding: 100px 20px;
+    padding-right: -50px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -104,7 +107,9 @@
 
 .card img {
     width: 450px;
-    margin-left: 80px;
+    height:400px;
+    margin-left: 30px;
+    border-radius: 10%;
 }
 
 .card-content {
@@ -172,7 +177,6 @@ button:hover {
 }
 
 /* Estilos del footer */
-
 footer {
     margin-top: auto;
     display: flex;
