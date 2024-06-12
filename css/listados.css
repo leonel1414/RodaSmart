@@ -269,3 +269,6 @@ button.btn-modificar:hover {
 input::placeholder{
     color: #817576;
 }
+.footer-listados{
+    position: absolute;
+}
